@@ -39,6 +39,7 @@ bool search(int value, int values[], int n)
             }
         }
     }
+    return false;
     
 //     int index = -1;
 
