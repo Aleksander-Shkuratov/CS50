@@ -17,26 +17,48 @@
 bool search(int value, int values[], int n)
 {
     // TODO: implement a searching algorithm
-    
-    int index = -1;
+    int left = 0;
+    int right = n - 1;
+    int middle;
 
     if (value <= 0){
         return false;
     }
     else {
-        for (int i = 0; i < n; i++){
-            if (values[i] == value){
-                index = i;
-                break;
+        while (left <= right){
+            middle = (left + right) / 2;
+
+            if (value == values[middle]){
+                return true;
+            }
+            else if (value < values[middle]){
+                right = middle - 1;
+            }
+            else if (value > values[middle]){
+                left = middle + 1;
             }
         }
-        if (index >= 0){
-            return true;
-        }  
-        else{
-            return false;
-        }
     }
+    
+//     int index = -1;
+
+//     if (value <= 0){
+//         return false;
+//     }
+//     else {
+//         for (int i = 0; i < n; i++){
+//             if (values[i] == value){
+//                 index = i;
+//                 break;
+//             }
+//         }
+//         if (index >= 0){
+//             return true;
+//         }  
+//         else{
+//             return false;
+//         }
+//     }
 }
 
 /**
