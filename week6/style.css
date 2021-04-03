@@ -1,0 +1,14 @@
+/* Body tag selector-sets the background color*/
+body {
+	background-color: lightblue;
+}
+
+/* Named block selector, sets the text color*/
+#pretty_color {
+	color: purple;
+}
+
+/* Class selector-sets the font */
+.pretty_font {
+  font-family: "Brush Script MT", cursive;
+}
